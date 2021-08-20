@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>node JS</title>
+   <style>
+      body{background: steelblue;}
+      h1{color: #feefef; font-size: 4rem; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+   </style>
+</head>
+<body>
+   <%- include("partials/nav.ejs") %>
+   <h1>Contact Us</h1>
+   <p>so far so good tthe node.js tutorials is going pretty well</p>
+
+   <form id="contact-form" method="POST" action="/contact">
+      <label for="name">Name</label>
+      <input type="text" name="name" value="<%= qs.person %>">
+      <label for="dept">Department</label>
+      <input type="text" name="dept" value="<%= qs.dept %>">
+      <label for="email">Your Email</label>
+      <input type="text" name="email">
+      <button type="submit">Submit</button>
+
+   </form>
+</body>
+</html>
